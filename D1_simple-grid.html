@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <meta http-equiv="X-UA_Compatibility" content="ie=edge" />
+
+    <title>Simple_GRID</title>
+    <style>
+        .grid-container {
+            display: grid;
+
+            /*grid-template-columns: 1fr 2fr;*/
+            grid-template-columns: repeat(2, 1fr 2fr);
+
+            /*grid-row-gap: 1em;
+        grid-column-gap: 1em;*/
+
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px, auto);
+
+            /*justify-items: stretch;
+        align-items: center;*/
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: grey;
+            color: white;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color: indianred;
+        }
+
+        #div1 {
+            align-self: center;
+            justify-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div id="div1">Lorem ploplo 1</div>
+        <div>Lorem ploplo 2</div>
+        <div>Lorem ploplo 3</div>
+        <div>Lorem ploplo 4</div>
+        <div>Lorem ploplo 5</div>
+    </div>
+</body>
+
+</html>

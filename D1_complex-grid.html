@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex-Grid</title>
+    <style>
+        * {
+            padding: 20px;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            grid-gap: 1em;
+        }
+
+        .grid-container>div {
+
+            padding: 1em;
+        }
+
+        .grid-container>div:nth-child(even) {}
+
+        .box1 {
+            background-color: red;
+        }
+
+        .box2 {
+            background-color: purple;
+            /* starts @ second line and ends at 4th line (of 3 columns created)*/
+            grid-column: 2/4;
+
+        }
+
+        .box3 {
+            background-color: blue;
+            grid-column: 3/4;
+            grid-row: 2/4;
+        }
+
+        .box4,
+        .box5 {
+            background-color: thistle;
+        }
+
+
+
+        .box6 {
+            background-color: saddlebrown;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box1">Lorem 1</div>
+        <div class="box2">Lorem 2</div>
+        <div class="box3">Lorem 3</div>
+        <div class="box4">Lorem 4</div>
+        <div class="box5">Lorem 5</div>
+        <div class="box6">Lorem 6</div>
+    </div>
+</body>
+
+</html>
